@@ -8,7 +8,7 @@ function NavBar() {
             <ul className='navbar-nav'>
             <li className='logo'>
                     <a href='#' className='nav-link'>
-                        <span className='link-text'>Maria Franco</span>
+                        <span >a</span>
                         <FontAwesomeIcon icon={faCode} className="fa-primary"/>
                     </a>
                 </li>
