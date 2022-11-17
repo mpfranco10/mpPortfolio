@@ -19,8 +19,7 @@ class NavBar extends React.Component {
     }
 
     componentDidMount() {
-        const t = document.getElementById('changeTheme');
-        t.onclick = this.changeTheme;
+    
     }
 
     changeTheme = () => {
@@ -67,7 +66,7 @@ class NavBar extends React.Component {
                             <span className='link-text'>Other</span>
                         </a>
                     </li>
-                    <li className='nav-item' id='changeTheme'>
+                    <li className='nav-item' id='changeTheme' onClick={this.changeTheme}>
                         <a href='#' className='nav-link'>
                             <FontAwesomeIcon icon={this.state.theme.icon} className="fa-primary" />
                             <span className='link-text'>{this.state.theme.text}</span>
