@@ -1,0 +1,85 @@
+.presentation {
+    width: auto;
+}
+
+.flexbox-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+
+.flexbox-item {
+    align-self: center;
+}
+
+.name-h1 {
+    font-family: "Rubik Maze";
+    color: var(--pink-color);
+}
+
+.profile-pic {
+    border-radius: 30%;
+}
+
+.bubble {
+    background-color: var(--bg-primary);
+    padding: 15px 25px;
+    max-width: 450px;
+    border-left: 5px solid;
+    border-color: var(--pink-color);
+    padding-bottom: 50px;
+}
+
+/* Large screens */
+@media only screen and (min-width: 1100px) {
+    .name-h1 {
+        font-size: 8em;
+        width: 520px;
+    }
+
+    .profile-pic {
+        width: 304px;
+        height: 304px;
+    }
+
+    .profile-pic {
+        padding: 50px;
+    }
+}
+
+/* Large screens */
+@media only screen and (max-width: 1100px) {
+    .name-h1 {
+        font-size: 5.5em;
+        width: 350px;
+    }
+
+    .profile-pic {
+        width: 228px;
+        height: 228px;
+    }
+
+    .profile-pic {
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 762px) {
+    .flexbox-container {
+        flex-direction: column;
+        -webkit-flex-flow: column-reverse;
+        flex-flow: column-reverse;
+    }
+
+    .name-h1 {
+        font-size: 6em;
+        margin-top: 0;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+
+    }
+}
