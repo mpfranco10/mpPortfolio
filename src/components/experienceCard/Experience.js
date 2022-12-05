@@ -56,7 +56,7 @@ function Experience() {
                         Elaborated software architecture diagrams and corrections. Contributed
                         to the development of a business intelligence web site, using tools such
                         as Telerik, Microsoft SSAS and SSIS. Contributed to a business
-                        intelligence Project (cube), using MicrosoftAnalysis Services.
+                        intelligence Project (cube), using Microsoft Analysis Services.
                     </p>
                     <div className='skills-container'>
                         <div className='skill-bubble'>Javascript</div>

@@ -25,3 +25,10 @@
     padding: 7px;
     margin: 3px 5px 3px 5px;
 }
+
+@media only screen and (max-width: 762px) {
+    .experience {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

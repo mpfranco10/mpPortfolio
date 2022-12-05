@@ -16,7 +16,7 @@ function Presentation() {
                 <div className='my-description'>
                     <p>Hi there! I'm</p>
                     <p className='name-h1'>María Franco</p>
-                    <p>A <strong>Sofware Developer</strong> passionate about Front-End Development. I am enthusiastic about developing engaging user experiences, and I am eager to learn new things everyday.</p>
+                    <p>A <strong>Software Developer</strong> passionate about Front-End Development. I am enthusiastic about developing engaging user experiences, and I am eager to learn new things everyday.</p>
                     <p>I'm currently working at <a href='https://www.consensus.com/' target='_blank'>Consensus Cloud Solutions</a> as a Full Stack Developer.</p>
                 </div>
             </div>

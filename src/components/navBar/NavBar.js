@@ -1,7 +1,7 @@
 import React from 'react';
 import './Bar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faSun, faBriefcase, faGraduationCap, faMoon, faLaptopCode, faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faSun, faBriefcase, faGraduationCap, faMoon, faLaptopCode, faEllipsis, faGears } from '@fortawesome/free-solid-svg-icons';
 
 const themes = {
     dark: { theme: 'dark', icon: faSun, text: 'Light Mode' },
@@ -40,7 +40,12 @@ class NavBar extends React.Component {
                             <span className='logo-text'>MF</span>
                         </a>
                     </li>
-
+                    <li className='nav-item'>
+                        <a href='#skills' className='nav-link'>
+                            <FontAwesomeIcon icon={faGears} className="fa-primary" />
+                            <span className='link-text'>Skills</span>
+                        </a>
+                    </li>
                     <li className='nav-item'>
                         <a href='#experience' className='nav-link'>
                             <FontAwesomeIcon icon={faBriefcase} className="fa-primary" />
