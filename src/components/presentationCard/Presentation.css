@@ -14,8 +14,9 @@
 }
 
 .name-h1 {
-    font-family: "Rubik Maze";
+    font-family: 'Bungee Shade', cursive;
     color: var(--pink-color);
+    text-align: center;
 }
 
 .profile-pic {

@@ -38,7 +38,7 @@ class NavBar extends React.Component {
                     <li className='logo'>
                         <a href='#' className='nav-link'>
                             <FontAwesomeIcon icon={faCode} className="fa-primary" />
-                            <span className='logo-text'>Maria F</span>
+                            <span className='logo-text'>MF</span>
                         </a>
                     </li>
 
