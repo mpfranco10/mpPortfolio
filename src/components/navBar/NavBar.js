@@ -25,7 +25,6 @@ class NavBar extends React.Component {
     changeTheme = () => {
         var current = this.state.theme.theme;
         var next = this.state.theme.theme === 'dark' ? 'light' : 'dark';
-        var nextIcon = themes[next].icon;
         const bodyClass = document.body.classList;
         bodyClass.replace(current, next);
         this.setState({ theme: themes[next]});
@@ -43,7 +42,7 @@ class NavBar extends React.Component {
                     </li>
 
                     <li className='nav-item'>
-                        <a href='#' className='nav-link'>
+                        <a href='#experience' className='nav-link'>
                             <FontAwesomeIcon icon={faBriefcase} className="fa-primary" />
                             <span className='link-text'>Experience</span>
                         </a>

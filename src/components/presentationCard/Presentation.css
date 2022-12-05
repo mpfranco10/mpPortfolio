@@ -1,42 +1,40 @@
 .presentation {
     width: auto;
+    height: 80vh;
 }
 
-.flexbox-container {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-}
-
-.flexbox-item {
-    align-self: center;
+a {
+    color: var(--pink-color);
 }
 
 .name-h1 {
-    font-family: 'Bungee Shade', cursive;
+    font-weight: 600;
     color: var(--pink-color);
-    text-align: center;
+    font-size: xx-large;
 }
 
 .profile-pic {
-    border-radius: 30%;
+    border-radius: 50%;
 }
 
-.bubble {
-    background-color: var(--bg-primary);
-    padding: 15px 25px;
-    max-width: 450px;
-    border-left: 5px solid;
-    border-color: var(--pink-color);
-    padding-bottom: 50px;
+.my-description {
+    font-size: larger;
+    text-align: justify;
+}
+
+.contact-icon {
+    font-size: xx-large !important;
+    margin-right: 20px;
+}
+
+.contact-icon:hover {
+    color: var(--auxiliar-color);
 }
 
 /* Large screens */
 @media only screen and (min-width: 1100px) {
-    .name-h1 {
-        font-size: 8em;
-        width: 520px;
+    #presentation-div {
+        margin-top: 20vh;
     }
 
     .profile-pic {
@@ -47,13 +45,17 @@
     .profile-pic {
         padding: 50px;
     }
+
+    .my-description {
+        max-width: 700px;
+        padding-right: 50px;
+    }
 }
 
 /* Large screens */
 @media only screen and (max-width: 1100px) {
-    .name-h1 {
-        font-size: 5.5em;
-        width: 350px;
+    #presentation-div {
+        margin-top: 20vh;
     }
 
     .profile-pic {
@@ -64,18 +66,28 @@
     .profile-pic {
         padding: 30px;
     }
+
+    .my-description {
+        max-width: 400px;
+        padding-right: 30px;
+    }
 }
 
 @media only screen and (max-width: 762px) {
-    .flexbox-container {
-        flex-direction: column;
-        -webkit-flex-flow: column-reverse;
-        flex-flow: column-reverse;
+    .presentation {
+        height: 100vh;
     }
 
-    .name-h1 {
-        font-size: 6em;
-        margin-top: 0;
+    .my-description {
+        font-size: 18px;
+    }
+
+    #presentation-div {
+        margin-top: 0vh;
+    }
+
+    .flexbox-container {
+        flex-direction: column;
     }
 
     .profile-pic {
