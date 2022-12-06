@@ -10,7 +10,7 @@ function Presentation() {
     return (<div className='presentation' id='presentation'>
         <div className='flexbox-container' id='presentation-div'>
             <div className='flexbox-item'>
-                <img className="profile-pic" src={image1} alt="Maria Franco Photo" />
+                <img className="profile-pic" src={image1} alt="Maria Franco Photo"  loading="eager"/>
             </div>
             <div className='flexbox-item'>
                 <div className='my-description'>

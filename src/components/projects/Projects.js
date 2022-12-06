@@ -32,7 +32,7 @@ function Projects() {
                 <div className='link-container'>
                     <a href={test} target="_blank">
                         <p>Click the image to see a screenshot of the project</p>
-                        <img width="300" height="300" border="0" align="center" src={hero} alt="" />
+                        <img width="300" height="300" border="0" align="center" src={hero} alt="" loading="lazy" />
                     </a>
                 </div>
             </div>
@@ -47,7 +47,7 @@ function Projects() {
                 </p>
                 <p>Screenshot of the project:</p>
                 <div className='link-container'>
-                    <img width="221" height="325" border="0" align="center" src={tictactoe} alt="" />
+                    <img width="221" height="325" border="0" align="center" src={tictactoe} alt="" loading="lazy" />
                 </div>
             </div>
             <hr />
@@ -65,7 +65,7 @@ function Projects() {
                         <picture className='link-container'>
                             <source media="(max-width:1250px)" width='300' height='632' srcSet={pickerSmall} />
                             <source media="(min-width:1250px)" srcSet={picker} />
-                            <img src={picker} alt="Date Picker" />
+                            <img src={picker} alt="Date Picker" loading="lazy" />
                         </picture>
                     </li>
                     <li>
@@ -73,7 +73,7 @@ function Projects() {
                         <picture className='link-container'>
                             <source media="(max-width:1250px)" srcSet={countdownSmall} />
                             <source media="(min-width:1250px)" srcSet={countdown} />
-                            <img src={picker} alt="Countdown" />
+                            <img src={picker} alt="Countdown" loading="lazy" />
                         </picture>
                     </li>
                     <li>
@@ -81,9 +81,9 @@ function Projects() {
                             The organization by color was the idea to visit the places with the same color in the same day.
                         </p>
                         <picture className='link-container'>
-                            <source media="(max-width:1250px)"  width='300' height='610' srcSet={mapSmall} />
+                            <source media="(max-width:1250px)" width='300' height='610' srcSet={mapSmall} />
                             <source media="(min-width:1250px)" srcSet={map} />
-                            <img src={picker} alt="Map" />
+                            <img src={picker} alt="Map" loading="lazy" />
                         </picture>
                     </li>
                     <li>
@@ -105,9 +105,9 @@ function Projects() {
                         </p>
                         <p>The budget is interactive, so it shows the user how much money he has left when he adds elements to the table.</p>
                         <picture className='link-container'>
-                            <source media="(max-width:1250px)"  width='300' height='654'  srcSet={budgetSmall} />
+                            <source media="(max-width:1250px)" width='300' height='654' srcSet={budgetSmall} />
                             <source media="(min-width:1250px)" srcSet={budget} />
-                            <img src={picker} alt="Budget" />
+                            <img src={picker} alt="Budget" loading="lazy" />
                         </picture>
                     </li>
                 </ul>
