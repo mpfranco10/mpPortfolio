@@ -30,6 +30,7 @@ function Experience() {
                         <div className='skill-bubble'>Spring</div>
                         <div className='skill-bubble'>Git</div>
                     </div>
+                    <p>For this job I use a different <a href='https://github.com/ne-mpfranco' target='_blank'>Github account</a>, feel free to check my contribution activity.</p>
                 </Bubble>
             </div>
             <div>
