@@ -1,7 +1,7 @@
 import React from 'react';
 import './Bar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faSun, faBriefcase, faGraduationCap, faMoon, faLaptopCode, faEllipsis, faGears } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faSun, faBriefcase, faGraduationCap, faMoon, faLaptopCode, faGears } from '@fortawesome/free-solid-svg-icons';
 
 const themes = {
     dark: { theme: 'dark', icon: faSun, text: 'Light Mode' },
@@ -53,21 +53,15 @@ class NavBar extends React.Component {
                         </a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#' className='nav-link'>
+                        <a href='#education' className='nav-link'>
                             <FontAwesomeIcon icon={faGraduationCap} className="fa-primary" />
                             <span className='link-text'>Education</span>
                         </a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#' className='nav-link'>
+                        <a href='#projects' className='nav-link'>
                             <FontAwesomeIcon icon={faLaptopCode} className="fa-primary" />
                             <span className='link-text'>Projects</span>
-                        </a>
-                    </li>
-                    <li className='nav-item'>
-                        <a href='#' className='nav-link'>
-                            <FontAwesomeIcon icon={faEllipsis} className="fa-primary" />
-                            <span className='link-text'>Other</span>
                         </a>
                     </li>
                     <li className='nav-item' id='changeTheme' onClick={this.changeTheme}>

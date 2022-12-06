@@ -118,6 +118,10 @@
       width: 100vw;
       height: 5rem;
     }
+
+    .Home {
+      margin-bottom: 5rem;
+    }
   
     .logo {
       display: none;
