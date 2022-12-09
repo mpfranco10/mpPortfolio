@@ -23,6 +23,7 @@ function Experience() {
                         <div className='skill-bubble'>Groovy</div>
                         <div className='skill-bubble'>jQuery</div>
                         <div className='skill-bubble'>Angular</div>
+                        <div className='skill-bubble'>React</div>
                         <div className='skill-bubble'>IntelliJ</div>
                         <div className='skill-bubble'>SCRUM</div>
                         <div className='skill-bubble'>Jira</div>
@@ -44,6 +45,7 @@ function Experience() {
                     <div className='skills-container'>
                         <div className='skill-bubble'>Javascript</div>
                         <div className='skill-bubble'>Vue.js</div>
+                        <div className='skill-bubble'>React</div>
                         <div className='skill-bubble'>Git</div>
                     </div>
                 </Bubble>
