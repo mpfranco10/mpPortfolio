@@ -1,33 +1,33 @@
 .projects {
-    max-width: 1154px;
-    height: auto;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
+  max-width: 1154px;
+  height: auto;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .projectImg {
-    width: 700px;
-    height: 390px;
+  width: 700px;
+  height: 390px;
 }
 
 .project {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .link-container {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 762px) {
-    .projects {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+  .projects {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

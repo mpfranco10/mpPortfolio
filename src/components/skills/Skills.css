@@ -1,48 +1,57 @@
 .skills {
-    max-width: 1154px;
-    height: auto;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
+  max-width: 1154px;
+  height: auto;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .skill {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid var(--text-primary);
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px var(--pink-color);
-    width: 85px;
-    margin: 10px 30px 10px 0px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid var(--text-primary);
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px var(--pink-color);
+  width: 85px;
+  margin: 10px 30px 10px 0px;
+}
+
+.skill:hover {
+  background-color: var(--bg-clear);
 }
 
 .skills-icon-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
 }
 
 .skill-image {
-    width: 45px;
-    height: 45px;
-    margin-top: 10px;
+  width: 45px;
+  height: 45px;
+  margin-top: 10px;
 }
 
 .skill-text {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 #languages {
-    margin-top: 30px;
+  margin-top: 30px;
+}
+
+li {
+  padding: 5px 0 5px 0;
+  list-style-type: hiragana;
 }
 
 @media only screen and (max-width: 762px) {
-    .skills {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+  .skills {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
