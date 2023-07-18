@@ -24,26 +24,49 @@ function Experience() {
             <p>
               <strong>Software Engineer</strong>
             </p>
-            <p>
-              Utilized React, TypeScript, and JavaScript to develop innovative
-              features, contributing to the continuous improvement of the
-              educational platform Blackboard.
-            </p>
-            <p>
-              Ensured the utilization of cutting-edge technologies and adherence
-              to high standards throughout the development process.{" "}
-            </p>
-            <p>
-              Collaborated with cross-functional teams to aid in the design of
-              new features, aligning them with platform requirements and
-              enhancing the user experience.{" "}
-            </p>
+            <ul>
+              <li>
+                Developed high-quality project features as part of a
+                collaborative development team, utilizing React, TypeScript, and
+                JavaScript to create engaging and user-friendly experiences.
+              </li>
+              <li>
+                Ensured the utilization of cutting-edge technologies and
+                adherence to high standards throughout the development process,
+                leveraging the latest tools and frameworks to drive innovation
+                and maintain code excellence.
+              </li>
+              <li>
+                Conducted performance checks and optimizations to ensure the
+                application's speed and efficiency.
+              </li>
+              <li>
+                Resolved production issues and defects promptly, employing
+                strong problem-solving skills to identify root causes and
+                implement effective solutions, while minimizing disruptions to
+                end-users.
+              </li>
+              <li>
+                Fostered effective team communication and collaboration,
+                actively participating in meetings, stand-ups, and discussions
+                to facilitate seamless information exchange and alignment among
+                team members, resulting in improved productivity and project
+                outcomes.
+              </li>
+            </ul>
+
             <div className="skills-container">
               <div className="skill-bubble">React</div>
               <div className="skill-bubble">Javascript</div>
               <div className="skill-bubble">Git</div>
+              <div className="skill-bubble">HTML</div>
               <div className="skill-bubble">CSS</div>
               <div className="skill-bubble">TypeScript</div>
+              <div className="skill-bubble">Java</div>
+              <div className="skill-bubble">Redux</div>
+              <div className="skill-bubble">Jenkins</div>
+              <div className="skill-bubble">Docker</div>
+              <div className="skill-bubble">Scrum</div>
             </div>
           </Bubble>
         </div>
@@ -59,22 +82,41 @@ function Experience() {
             <p>
               <strong>Full Stack Developer</strong>
             </p>
-            <p>
-              Development of new features and maintenance support for{" "}
-              <strong>eFax Corporate</strong>, a cloud faxing web project used
-              by multiple clients around the world. Development and maintenance
-              of endpoints that expose eFax Corporate functionality.
-            </p>
-            <p>
-              Collaborated within an international team to ensure seamless
-              integration and adherence to established code standards.{" "}
-            </p>
-            <p>
-              Demonstrated a commitment to delivering a high-quality platform to
-              clients by consistently upholding rigorous development practices.{" "}
-            </p>
+            <ul>
+              <li>
+                Successfully developed new features and provided comprehensive
+                support for the eFax Corporate platform, a web-based solution
+                for managing cloud faxes in the USA, with a primary focus on
+                front-end development.
+              </li>
+              <li>
+                Utilized Grails/Groovy, Angular, React, JavaScript, and Java to
+                implement innovative features and enhance the user experience.
+              </li>
+              <li>
+                Collaborated within an international team to ensure seamless
+                integration and adherence to established code standards,
+                fostering effective communication and collaboration across
+                different teams and time zones.
+              </li>
+              <li>
+                Demonstrated a commitment to delivering a high-quality platform
+                to clients by consistently upholding rigorous development
+                practices and ensuring that the interface was user-friendly and
+                compliant with the company's standards.
+              </li>
+              <li>
+                Worked closely with designers and UX/UI specialists to translate
+                concepts into intuitive and visually appealing user interfaces,
+                contributing to an enhanced user experience.
+              </li>
+            </ul>
+
             <div className="skills-container">
               <div className="skill-bubble">Javascript</div>
+              <div className="skill-bubble">React</div>
+              <div className="skill-bubble">HTML</div>
+              <div className="skill-bubble">CSS</div>
               <div className="skill-bubble">Grails</div>
               <div className="skill-bubble">Groovy</div>
               <div className="skill-bubble">jQuery</div>
@@ -100,19 +142,40 @@ function Experience() {
             <p>
               <strong>Software Developer</strong>
             </p>
-            <p>
-              Front-end development for an application to report national level
-              health events in Colombia, utilizing Vue.js and JavaScript.{" "}
-            </p>
-            <p>
-              Assisted in the development of a laboratory module within the
-              application, responsible for logging lab results for multiple
-              patients across the country.{" "}
-            </p>
+            <ul>
+              <li>
+                Front-end development for an application to report
+                national-level health events in Colombia, primarily utilizing
+                Vue.js and JavaScript.
+              </li>
+              <li>
+                Assisted in the development of a laboratory module within the
+                application, which involved logging lab results for multiple
+                patients across the country.
+              </li>
+              <li>
+                Implemented best programming practices, ensuring clean, modular,
+                and maintainable code that adhered to coding standards and
+                industry best practices.
+              </li>
+              <li>
+                Collaborated closely with a multi-functional team, including
+                designers, backend developers, and QA engineers, to produce code
+                that complied with functional requirements and visual
+                specifications.
+              </li>
+              <li>
+                Actively participated in code reviews and provided constructive
+                feedback to improve code quality, consistency, and performance.
+              </li>
+            </ul>
+
             <div className="skills-container">
               <div className="skill-bubble">Javascript</div>
               <div className="skill-bubble">Vue.js</div>
               <div className="skill-bubble">Git</div>
+              <div className="skill-bubble">HTML</div>
+              <div className="skill-bubble">CSS</div>
             </div>
           </Bubble>
         </div>
@@ -128,20 +191,29 @@ function Experience() {
             <p>
               <strong>Software Analyst</strong>
             </p>
-            <p>Developed improvements to the company's databases using SQL. </p>
-            <p>
-              Developed diagrams and corrections related to the software
-              architecture of various company projects.{" "}
-            </p>
-            <p>
-              Contributed to the development of a business intelligence website,
-              utilizing tools such as Telerik, Microsoft SSAS (SQL Server
-              Analysis Services), and SSIS (SQL Server Integration Services).{" "}
-            </p>
-            <p>
-              Played a role in the business intelligence project, specifically
-              in the development of a cube using Microsoft Analysis Services.{" "}
-            </p>
+            <ul>
+              <li>
+                Developed database improvements using SQL to enhance the
+                company's data infrastructure.
+              </li>
+              <li>
+                Created diagrams and made corrections related to the software
+                architecture of various company projects, ensuring efficient and
+                scalable solutions.
+              </li>
+              <li>
+                Contributed to the development of a business intelligence
+                website, utilizing tools such as Telerik, Microsoft SSAS (SQL
+                Server Analysis Services), and SSIS (SQL Server Integration
+                Services).
+              </li>
+              <li>
+                Played a significant role in the business intelligence project,
+                specifically focusing on the development of a cube using
+                Microsoft Analysis Services.
+              </li>
+            </ul>
+
             <div className="skills-container">
               <div className="skill-bubble">Javascript</div>
               <div className="skill-bubble">SQL</div>

@@ -17,6 +17,10 @@
   flex-wrap: wrap;
 }
 
+.experience li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .skill-bubble {
   border: 0px solid;
   border-radius: 10px;

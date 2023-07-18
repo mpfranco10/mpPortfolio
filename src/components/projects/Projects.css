@@ -8,13 +8,15 @@
   padding-right: 50px;
 }
 
-.projectImg {
-  width: 700px;
-  height: 390px;
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 500px));
+  gap: 30px;
 }
 
-.project {
-  margin-bottom: 30px;
+.projectImg {
+  max-width: 400px;
+  height: auto;
 }
 
 .link-container {
@@ -29,5 +31,10 @@
   .projects {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .projectImg {
+    max-width: 200px;
+    height: auto;
   }
 }
