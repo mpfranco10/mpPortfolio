@@ -1,136 +1,155 @@
 .presentation {
-  width: auto;
-  height: 80vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 560px);
   align-items: center;
-  margin: auto;
   justify-content: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  gap: clamp(32px, 4vw, 64px);
+  min-height: 68vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 72px 32px;
+  scroll-margin-top: 32px;
 }
 
-a {
-  color: var(--pink-color);
-}
-
-.name-h1 {
-  font-weight: 600;
-  color: var(--pink-color);
-  font-size: xx-large;
-}
-
-.profile-pic {
+.presentation .profile-pic {
+  display: block;
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  object-fit: cover;
   border-radius: 50%;
+  margin-top: 0;
 }
 
-.my-description {
-  font-size: larger;
-  text-align: justify;
+.presentation .my-description {
+  min-width: 0;
+  text-align: left;
 }
 
-.contact-icon {
-  font-size: xx-large !important;
-  margin-right: 20px;
+.presentation-greeting {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.contact-icon:hover {
-  color: var(--auxiliar-color);
+.presentation h1 {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.035em;
 }
-.wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+
+.presentation-flower {
   display: inline-block;
+  margin-left: 12px;
+  font-size: 0.65em;
+  vertical-align: middle;
 }
 
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-  }
+.presentation-role {
+  margin: 12px 0 18px;
+  color: var(--pink-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.7;
 }
 
-/* Large screens */
-@media only screen and (min-width: 1100px) {
-  #presentation-div {
-    margin-top: 20vh;
-  }
-
-  .profile-pic {
-    width: 304px;
-    height: 304px;
-  }
-
-  .profile-pic {
-    margin-right: 50px;
-  }
-
-  .my-description {
-    max-width: 700px;
-  }
+.presentation-bio {
+  margin: 0 0 18px;
+  max-width: 54ch;
+  font-size: 0.85rem;
+  line-height: 1.8;
 }
 
-/* Large screens */
-@media only screen and (max-width: 1100px) {
-  #presentation-div {
-    margin-top: 20vh;
-  }
-
-  .profile-pic {
-    width: 228px;
-    height: 228px;
-  }
-
-  .profile-pic {
-    margin-right: 30px;
-  }
-
-  .my-description {
-    max-width: 1000px;
-  }
+.presentation-opportunities {
+  margin: 20px 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--pink-color);
 }
 
-@media only screen and (max-width: 762px) {
+.presentation-contact,
+.presentation-socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.presentation-contact a,
+.presentation-location,
+.presentation-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.presentation a {
+  color: var(--text-primary);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 160ms ease;
+}
+
+.presentation a:hover {
+  color: var(--pink-color);
+}
+
+.presentation a:focus-visible {
+  outline: 2px solid var(--pink-color);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+.presentation-contact svg,
+.presentation-socials span {
+  color: var(--pink-color);
+}
+
+.presentation-socials {
+  margin-top: 20px;
+}
+.presentation-socials svg {
+  font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
   .presentation {
-    height: 100vh;
-    padding-left: 10px;
-    padding-right: 10px;
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 32px;
+    padding: 64px 20px;
   }
-
-  .my-description {
-    font-size: 18px;
+  .presentation .profile-pic {
+    width: 170px;
+    height: 170px;
   }
+}
 
-  #presentation-div {
-    margin-top: 0vh;
+@media (max-width: 700px) {
+  .presentation {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: auto;
+    gap: 32px;
+    padding: 48px 12px 64px;
   }
-
-  .flexbox-container {
-    flex-direction: column;
+  .presentation .profile-pic {
+    width: 140px;
+    height: 140px;
+    margin-top: 0;
   }
+  .presentation h1 {
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+  }
+}
 
-  .profile-pic {
-    width: 200px;
-    height: 200px;
+@media (prefers-reduced-motion: reduce) {
+  .presentation a {
+    transition: none;
   }
 }

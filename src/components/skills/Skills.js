@@ -7,69 +7,127 @@ import htmlImage from "../../assets/html.svg";
 import cssImage from "../../assets/css.svg";
 import sqlImage from "../../assets/sql.svg";
 import angularImage from "../../assets/angular.svg";
-import performanceImage from "../../assets/performance.svg";
 import grailsImage from "../../assets/grails.svg";
 import pythonImage from "../../assets/python.svg";
 import gitImage from "../../assets/giticon.svg";
-import Bubble from "../Bubble";
 
-function Skill(props) {
+// Placeholder icons reuse existing assets. Replace each icon here when ready.
+const skillGroups = [
+  {
+    title: "Core Front-End",
+    core: true,
+    skills: [
+      { name: "React", icon: reactImage, featured: true },
+      { name: "TypeScript", icon: jsImage, featured: true, placeholder: true },
+      { name: "JavaScript", icon: jsImage },
+      { name: "HTML", icon: htmlImage },
+      { name: "CSS", icon: cssImage },
+    ],
+  },
+  {
+    title: "Front-End Ecosystem",
+    skills: [
+      { name: "Material UI (MUI)", icon: reactImage, placeholder: true },
+      {
+        name: "React Query / TanStack Query",
+        icon: reactImage,
+        placeholder: true,
+      },
+      { name: "Zustand", icon: jsImage, placeholder: true },
+      { name: "React Router", icon: reactImage, placeholder: true },
+      { name: "Jest", icon: jsImage, placeholder: true },
+      { name: "React Testing Library", icon: reactImage, placeholder: true },
+      { name: "REST APIs", icon: sqlImage, placeholder: true },
+    ],
+  },
+  {
+    title: "Additional Development Experience",
+    skills: [
+      { name: "Vue.js", icon: angularImage, placeholder: true },
+      { name: "Angular", icon: angularImage },
+      { name: "Java", icon: javaImage },
+      { name: "Grails / Groovy", icon: grailsImage },
+      { name: "SQL", icon: sqlImage },
+      { name: "Git", icon: gitImage },
+    ],
+  },
+  {
+    title: "Research & Tools",
+    skills: [
+      { name: "Python", icon: pythonImage },
+      { name: "GitHub", icon: gitImage, placeholder: true },
+      { name: "Jira", icon: gitImage, placeholder: true },
+      { name: "Postman", icon: sqlImage, placeholder: true },
+    ],
+  },
+];
+
+function Skill({ name, icon, featured, placeholder }) {
   return (
-    <div className="skill">
-      <img src={props.icon} className="skill-image" alt={props.text} />
-      <p className="skill-text">{props.text}</p>
-    </div>
+    <li className={`skill${featured ? " skill--featured" : ""}`}>
+      <img
+        src={icon}
+        className={`skill-image${
+          placeholder ? " skill-image--placeholder" : ""
+        }`}
+        alt=""
+        width="22"
+        height="22"
+        loading="lazy"
+      />
+      <span className="skill-text">{name}</span>
+    </li>
   );
 }
 
 function Skills() {
   return (
-    <div className="skills" id="skills">
-      <p className="title">
-        {" "}
-        <span className="emoji" role="img" aria-label="laptopEmoji">
+    <section className="skills" id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" className="skills-heading">
+        <span role="img" aria-label="Laptop">
           💻
-        </span>
+        </span>{" "}
         Skills
-      </p>
-      <div className="skills-icon-container">
-        <Skill icon={jsImage} text="Javascript"></Skill>
-        <Skill icon={reactImage} text="React"></Skill>
-        <Skill icon={gitImage} text="Git"></Skill>
-        <Skill icon={javaImage} text="Java"></Skill>
-        <Skill icon={htmlImage} text="HTML"></Skill>
-        <Skill icon={cssImage} text="CSS"></Skill>
-        <Skill icon={performanceImage} text="Web performance"></Skill>
-        <Skill icon={sqlImage} text="SQL"></Skill>
-        <Skill icon={angularImage} text="Angular"></Skill>
-        <Skill icon={grailsImage} text="Grails/Groovy"></Skill>
-        <Skill icon={pythonImage} text="Python"></Skill>
+      </h2>
+      <div className="skills-groups">
+        {skillGroups.map(({ title, core, skills }, index) => (
+          <section
+            className={`skills-group${core ? " skills-group--core" : ""}`}
+            key={title}
+            aria-labelledby={`skills-group-${index}`}
+          >
+            <h3 id={`skills-group-${index}`}>{title}</h3>
+            <ul className="skills-list">
+              {skills.map((skill) => (
+                <Skill key={skill.name} {...skill} />
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
-      <div id="languages">
-        <Bubble>
-          <p>
-            <strong>
-              <span className="emoji" role="img" aria-label="catEmoji">
-                😸
-              </span>
-              Languages{" "}
-            </strong>
-          </p>
-          <ul>
-            <li>
-              <strong>English:</strong>&nbsp; Advanced level (C1) – TOEFL iBT
-              110/120
-            </li>
-            <li>
-              <strong>Spanish:</strong>&nbsp; Native level
-            </li>
-            <li>
-              <strong>Japanese:</strong>&nbsp; Pre intermediate level
-            </li>
-          </ul>
-        </Bubble>
+      <div className="skills-languages" id="languages">
+        <h3>
+          <span role="img" aria-label="Globe">
+            🌎
+          </span>{" "}
+          Languages
+        </h3>
+        <ul>
+          <li>
+            <strong>Spanish</strong>
+            <span>Native</span>
+          </li>
+          <li>
+            <strong>English</strong>
+            <span>Fluent / TOEIC 990</span>
+          </li>
+          <li>
+            <strong>Japanese</strong>
+            <span>JLPT N2</span>
+          </li>
+        </ul>
       </div>
-    </div>
+    </section>
   );
 }
 
