@@ -1,71 +1,88 @@
-# Getting Started with Create React App
+# 👩‍💻 Maria Franco — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio showcasing my experience as a Software Engineer, selected development projects, and current research in User Experience and Human-Centered Technology.
 
-## Available Scripts
+🌐 **Live Portfolio:**  
+https://mpfranco10.github.io/mpPortfolio/
 
-In the project directory, you can run:
+## ✨ About
 
-### `npm start`
+I'm a Software Engineer from Colombia currently based in Japan, with professional experience primarily focused on Front-End development and modern web applications.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I am currently pursuing an M.S. in Informatics at the University of Tsukuba as a MEXT Scholar, where my research explores Kansei Engineering, User Experience (UX), and User-Centered Web Design.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This portfolio brings together my professional experience, technical skills, education, and selected development and research projects.
 
-### `npm test`
+## 🛠️ Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- JavaScript
+- HTML5
+- CSS3
+- GitHub Pages
 
-### `npm run build`
+The portfolio is fully responsive and includes light and dark themes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Portfolio Sections
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Skills** — Technologies and tools I have worked with professionally and academically.
+- **Experience** — Software engineering experience working with international and cross-functional teams.
+- **Education** — Academic background in Computer Science, Electronics Engineering, and Informatics.
+- **Projects & Research** — Selected software development projects and research work combining technology, UX, and human-centered design.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Running Locally
 
-### `npm run eject`
+Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/mpfranco10/mpPortfolio.git
+cd mpPortfolio
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Start the development server:
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application will run at:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+http://localhost:3000
+```
 
-### Code Splitting
+## 📦 Production Build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Create an optimized production build with:
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🌐 Deployment
 
-### Making a Progressive Web App
+The portfolio is deployed using GitHub Pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To build and deploy the latest version:
 
-### Advanced Configuration
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The `predeploy` script automatically creates the production build before publishing it to the `gh-pages` branch.
 
-### Deployment
+Live version:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+https://mpfranco10.github.io/mpPortfolio/
 
-### `npm run build` fails to minify
+## 📬 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# mpPortfolio"
+I'm currently open to opportunities in Software Engineering and Front-End Development in Japan.
+
+Feel free to connect with me through the contact information available on my portfolio.
