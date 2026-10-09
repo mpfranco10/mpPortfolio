@@ -1,0 +1,151 @@
+.timeline-card {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 28px;
+  padding: 26px 0;
+  border-top: 1px solid var(--bg-clear);
+  transition: border-color 160ms ease;
+}
+
+.timeline-card:first-child {
+  border-top-color: var(--pink-color);
+}
+
+.timeline-card:hover {
+  border-top-color: var(--pink-color);
+}
+
+.timeline-period {
+  margin: 3px 0 0;
+  color: var(--text-primary);
+  font-size: 0.72rem;
+  line-height: 1.8;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline-details {
+  min-width: 0;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.timeline-subtitle {
+  margin: 6px 0 18px;
+  color: var(--pink-color);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.timeline-description {
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.timeline-description p {
+  margin: 0 0 12px;
+}
+
+.timeline-highlight {
+  color: var(--pink-color);
+  font-weight: 500;
+}
+
+.timeline-items {
+  padding-left: 18px;
+  margin: 0 0 18px;
+}
+
+.timeline-items > li {
+  padding-left: 4px;
+  margin-bottom: 8px;
+}
+
+.timeline-items > li::marker {
+  color: var(--pink-color);
+  font-size: 0.8em;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.timeline-tag {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 5px 9px;
+  border: 1px solid var(--bg-clear);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  transition: border-color 160ms ease;
+}
+
+.timeline-tag:hover {
+  border-color: var(--pink-color);
+}
+
+/* Custom content passed as children, such as education degrees */
+.education-degrees {
+  padding-left: 18px;
+  margin: 0 0 12px;
+}
+
+.education-degrees > li {
+  padding-left: 4px;
+  margin-bottom: 6px;
+}
+
+.education-degrees > li::marker {
+  color: var(--pink-color);
+  font-size: 0.8em;
+}
+
+.education-minor {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .timeline-card {
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .timeline-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding: 22px 0;
+  }
+
+  .timeline-period {
+    margin: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-card,
+  .timeline-tag {
+    transition: none;
+  }
+}

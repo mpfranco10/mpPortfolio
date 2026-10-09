@@ -6,7 +6,7 @@
   scroll-margin-top: 32px;
 }
 
-.education .education-heading {
+.education-heading {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -21,107 +21,12 @@
   font-size: 1em;
 }
 
-.education-card {
-  display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
-  gap: 28px;
-  padding: 26px 0;
-  border-top: 1px solid var(--bg-clear);
-  transition: border-color 160ms ease;
-}
-
-.education-card:first-child {
-  border-top-color: var(--pink-color);
-}
-.education-card:hover {
-  border-top-color: var(--pink-color);
-}
-
-.education .education-period {
-  margin: 3px 0 0;
-  color: var(--text-primary);
-  font-size: 0.72rem;
-  line-height: 1.8;
-  font-variant-numeric: tabular-nums;
-}
-
-.education-details {
-  min-width: 0;
-}
-
-.education-header h3 {
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-}
-
-.education .education-degree {
-  margin: 6px 0 18px;
-  color: var(--pink-color);
-  font-size: 0.78rem;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.education-courses {
-  color: var(--text-primary);
-  font-size: 0.8rem;
-  line-height: 1.8;
-  overflow-wrap: anywhere;
-}
-
-.education-courses p {
-  margin: 0 0 10px;
-  font-size: 0.72rem;
-  font-weight: 500;
-}
-
-/* Short course names form a compact academic list, distinct from work descriptions. */
-.education-courses ul {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px 24px;
-  padding-left: 18px;
-  margin: 0;
-}
-
-.education-courses li {
-  padding-left: 4px;
-}
-.education-courses li::marker {
-  color: var(--pink-color);
-  font-size: 0.8em;
-}
-
-@media (max-width: 900px) {
-  .education-card {
-    grid-template-columns: 130px minmax(0, 1fr);
-    gap: 20px;
-  }
-  .education-courses ul {
-    grid-template-columns: minmax(0, 1fr);
-  }
+.education-list {
+  width: 100%;
 }
 
 @media (max-width: 700px) {
   .education {
     padding: 24px 12px 48px;
-  }
-  .education-card {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 8px;
-    padding: 22px 0;
-  }
-  .education .education-period {
-    margin: 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .education-card {
-    transition: none;
   }
 }

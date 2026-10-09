@@ -1,5 +1,5 @@
 import React from "react";
-import "./Skills.css";
+import "./skills.css";
 import jsImage from "../../assets/js.svg";
 import reactImage from "../../assets/react.svg";
 import javaImage from "../../assets/java.svg";

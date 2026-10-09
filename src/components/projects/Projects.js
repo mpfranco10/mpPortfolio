@@ -1,5 +1,5 @@
 import React from "react";
-import "./Projects.css";
+import "./projects.css";
 
 import marvelScreenshot from "../../assets/reactMarvel.jpg";
 import hero from "../../assets/hero.jpg";
