@@ -77,7 +77,7 @@ const projects = [
   },
 ];
 
-function ProjectCard({ project }) {
+const ProjectCard = ({ project }) => {
   const {
     id,
     title,
@@ -179,9 +179,9 @@ function ProjectCard({ project }) {
       </div>
     </article>
   );
-}
+};
 
-function Projects() {
+const Projects = () => {
   return (
     <section
       className="projects"
@@ -207,6 +207,6 @@ function Projects() {
       </div>
     </section>
   );
-}
+};
 
 export default Projects;

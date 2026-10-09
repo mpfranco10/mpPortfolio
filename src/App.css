@@ -21,7 +21,7 @@
   --bg-primary: #f5d8ef;
   --bg-clear: #f0a6ca;
   --bg-secondary: #f0e6ef;
-  --pink-color: #9c89b8;
+  --pink-color: #785f9e;
   --auxiliar-color: #b8bedd;
 }
 
@@ -98,4 +98,38 @@ body::-webkit-scrollbar-thumb {
 }
 .emoji {
   font-size: xx-large;
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--pink-color);
+}
+
+.Home .App {
+  margin-left: 4rem;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  .Home {
+    margin-bottom: calc(4rem + env(safe-area-inset-bottom));
+  }
+
+  .Home .App {
+    margin-left: 0;
+  }
 }

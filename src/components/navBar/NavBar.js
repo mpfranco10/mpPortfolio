@@ -1,160 +1,192 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./navBar.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCode,
-  faSun,
   faBriefcase,
-  faGraduationCap,
-  faMoon,
-  faLaptopCode,
+  faCode,
   faGears,
+  faGraduationCap,
+  faLaptopCode,
+  faMoon,
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
 
 const themes = {
-  dark: { theme: "dark", icon: faSun, text: "Light Mode" },
-  light: { theme: "light", icon: faMoon, text: "Dark Mode" },
+  dark: {
+    name: "dark",
+    icon: faSun,
+    text: "Light Mode",
+  },
+  light: {
+    name: "light",
+    icon: faMoon,
+    text: "Dark Mode",
+  },
 };
-class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      theme: themes.dark,
-      activeSection: "presentation",
-    };
-    let theme = this.state.theme;
-    const bodyClass = document.body.classList;
-    bodyClass.add(theme.theme);
-  }
 
-  componentDidMount() {
-    this.updateActiveSection();
-    window.addEventListener("scroll", this.scheduleActiveUpdate, {
-      passive: true,
-    });
-    window.addEventListener("resize", this.scheduleActiveUpdate);
-    window.addEventListener("hashchange", this.scheduleActiveUpdate);
-  }
+const navItems = [
+  {
+    section: "skills",
+    label: "Skills",
+    icon: faGears,
+  },
+  {
+    section: "experience",
+    label: "Experience",
+    icon: faBriefcase,
+  },
+  {
+    section: "education",
+    label: "Education",
+    icon: faGraduationCap,
+  },
+  {
+    section: "projects",
+    label: "Projects",
+    icon: faLaptopCode,
+  },
+];
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.scheduleActiveUpdate);
-    window.removeEventListener("resize", this.scheduleActiveUpdate);
-    window.removeEventListener("hashchange", this.scheduleActiveUpdate);
-    cancelAnimationFrame(this.scrollFrame);
-  }
+const sections = [
+  "presentation",
+  "skills",
+  "experience",
+  "education",
+  "projects",
+];
 
-  scheduleActiveUpdate = () => {
-    if (this.scrollFrame) return;
-    this.scrollFrame = requestAnimationFrame(() => {
-      this.scrollFrame = null;
-      this.updateActiveSection();
-    });
-  };
+const NavLink = ({ section, label, icon, activeSection }) => {
+  const isActive = activeSection === section;
 
-  updateActiveSection = () => {
-    const sections = [
-      "presentation",
-      "skills",
-      "experience",
-      "education",
-      "projects",
-    ];
-    let activeSection = "presentation";
+  return (
+    <li className="nav-item">
+      <a
+        href={`#${section}`}
+        className={`nav-link${isActive ? " is-active" : ""}`}
+        aria-label={label}
+        aria-current={isActive ? "location" : undefined}
+      >
+        <FontAwesomeIcon icon={icon} className="fa-primary" />
+        <span className="link-text">{label}</span>
+      </a>
+    </li>
+  );
+};
+
+const NavBar = () => {
+  const [theme, setTheme] = useState(themes.dark);
+  const [activeSection, setActiveSection] = useState("presentation");
+  const scrollFrame = useRef(null);
+
+  const updateActiveSection = useCallback(() => {
+    let currentSection = "presentation";
+
     sections.forEach((id) => {
       const section = document.getElementById(id);
+
       if (
         section &&
         section.getBoundingClientRect().top <= window.innerHeight * 0.3
       ) {
-        activeSection = id;
+        currentSection = id;
       }
     });
-    if (
+
+    const isAtBottom =
       window.scrollY > 0 &&
       window.scrollY + window.innerHeight >=
-        document.documentElement.scrollHeight - 2
-    ) {
-      activeSection = "projects";
+        document.documentElement.scrollHeight - 2;
+
+    if (isAtBottom) {
+      currentSection = "projects";
     }
-    if (activeSection !== this.state.activeSection)
-      this.setState({ activeSection });
-  };
 
-  linkProps = (section, label) => ({
-    className: `nav-link${
-      this.state.activeSection === section ? " is-active" : ""
-    }`,
-    "aria-label": label,
-    "aria-current":
-      this.state.activeSection === section ? "location" : undefined,
-  });
-
-  changeTheme = () => {
-    var current = this.state.theme.theme;
-    var next = this.state.theme.theme === "dark" ? "light" : "dark";
-    const bodyClass = document.body.classList;
-    bodyClass.replace(current, next);
-    this.setState({ theme: themes[next] });
-  };
-
-  render() {
-    return (
-      <nav className="navbar" aria-label="Portfolio navigation">
-        <ul className="navbar-nav">
-          <li className="logo">
-            <a
-              href="#presentation"
-              {...this.linkProps("presentation", "MF — Introduction")}
-            >
-              <FontAwesomeIcon icon={faCode} className="fa-primary" />
-              <span className="logo-text">MF</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#skills" {...this.linkProps("skills", "Skills")}>
-              <FontAwesomeIcon icon={faGears} className="fa-primary" />
-              <span className="link-text">Skills</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#experience"
-              {...this.linkProps("experience", "Experience")}
-            >
-              <FontAwesomeIcon icon={faBriefcase} className="fa-primary" />
-              <span className="link-text">Experience</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#education" {...this.linkProps("education", "Education")}>
-              <FontAwesomeIcon icon={faGraduationCap} className="fa-primary" />
-              <span className="link-text">Education</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#projects" {...this.linkProps("projects", "Projects")}>
-              <FontAwesomeIcon icon={faLaptopCode} className="fa-primary" />
-              <span className="link-text">Projects</span>
-            </a>
-          </li>
-          <li className="nav-item" id="changeTheme">
-            <button
-              type="button"
-              className="nav-link"
-              onClick={this.changeTheme}
-              aria-label={`Switch to ${this.state.theme.text.toLowerCase()}`}
-            >
-              <FontAwesomeIcon
-                icon={this.state.theme.icon}
-                className="fa-primary"
-              />
-              <span className="link-text">{this.state.theme.text}</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
+    setActiveSection((previousSection) =>
+      previousSection === currentSection ? previousSection : currentSection
     );
-  }
-}
+  }, []);
+
+  const scheduleActiveUpdate = useCallback(() => {
+    if (scrollFrame.current) {
+      return;
+    }
+
+    scrollFrame.current = requestAnimationFrame(() => {
+      scrollFrame.current = null;
+      updateActiveSection();
+    });
+  }, [updateActiveSection]);
+
+  useEffect(() => {
+    document.body.classList.add(theme.name);
+
+    return () => {
+      document.body.classList.remove(theme.name);
+    };
+  }, [theme.name]);
+
+  useEffect(() => {
+    updateActiveSection();
+
+    window.addEventListener("scroll", scheduleActiveUpdate, {
+      passive: true,
+    });
+    window.addEventListener("resize", scheduleActiveUpdate);
+    window.addEventListener("hashchange", scheduleActiveUpdate);
+
+    return () => {
+      window.removeEventListener("scroll", scheduleActiveUpdate);
+      window.removeEventListener("resize", scheduleActiveUpdate);
+      window.removeEventListener("hashchange", scheduleActiveUpdate);
+
+      if (scrollFrame.current) {
+        cancelAnimationFrame(scrollFrame.current);
+      }
+    };
+  }, [scheduleActiveUpdate, updateActiveSection]);
+
+  const changeTheme = () => {
+    setTheme((currentTheme) =>
+      currentTheme.name === "dark" ? themes.light : themes.dark
+    );
+  };
+
+  const isPresentationActive = activeSection === "presentation";
+
+  return (
+    <nav className="navbar" aria-label="Portfolio navigation">
+      <ul className="navbar-nav">
+        <li className="logo">
+          <a
+            href="#presentation"
+            className={`nav-link${isPresentationActive ? " is-active" : ""}`}
+            aria-label="MF — Introduction"
+            aria-current={isPresentationActive ? "location" : undefined}
+          >
+            <FontAwesomeIcon icon={faCode} className="fa-primary" />
+            <span className="logo-text">MF</span>
+          </a>
+        </li>
+
+        {navItems.map((item) => (
+          <NavLink key={item.section} {...item} activeSection={activeSection} />
+        ))}
+
+        <li className="nav-item" id="changeTheme">
+          <button
+            type="button"
+            className="nav-link"
+            onClick={changeTheme}
+            aria-label={`Switch to ${theme.text.toLowerCase()}`}
+          >
+            <FontAwesomeIcon icon={theme.icon} className="fa-primary" />
+            <span className="link-text">{theme.text}</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
 export default NavBar;

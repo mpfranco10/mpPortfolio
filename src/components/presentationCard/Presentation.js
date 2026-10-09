@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLocationDot, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-function Presentation() {
+const Presentation = () => {
   return (
     <section
       className="presentation"
@@ -81,6 +81,6 @@ function Presentation() {
       </div>
     </section>
   );
-}
+};
 
 export default Presentation;
