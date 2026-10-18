@@ -225,3 +225,25 @@
     transition: none;
   }
 }
+
+/* Language control follows the same icon and label layout as navigation. */
+.navbar .language-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar .language-options .is-selected {
+  color: var(--pink-color);
+  font-weight: 700;
+}
+
+.navbar .language-divider {
+  opacity: 0.45;
+}
+
+@media (max-width: 600px) {
+  .navbar .language-options {
+    display: none;
+  }
+}

@@ -23,6 +23,13 @@ This portfolio brings together my professional experience, technical skills, edu
 
 The portfolio is fully responsive and includes light and dark themes.
 
+English and Japanese translations live in `src/i18n/locales/en.json` and
+`src/i18n/locales/ja.json`. On a first visit, Japanese browser locales use Japanese;
+other locales use English. The navigation language selector saves an explicit
+choice under `portfolioLanguage` in localStorage. Clear that key to use browser
+detection again. Translation keys and array entries should stay aligned between
+the two files.
+
 ## 📂 Portfolio Sections
 
 - **Skills** — Technologies and tools I have worked with professionally and academically.

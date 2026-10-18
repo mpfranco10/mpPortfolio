@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import React from "react";
 import "./skills.css";
 
@@ -25,60 +26,116 @@ import postmanImage from "../../assets/postman.svg";
 
 const skillGroups = [
   {
-    title: "Core Front-End",
     core: true,
     skills: [
-      { name: "React", icon: reactImage, featured: true },
       {
-        name: "TypeScript",
+        icon: reactImage,
+        featured: true,
+        nameKey: 0,
+      },
+      {
         icon: tsImage,
         featured: true,
+        nameKey: 1,
       },
-      { name: "JavaScript", icon: jsImage },
-      { name: "HTML", icon: htmlImage },
-      { name: "CSS", icon: cssImage },
-    ],
-  },
-  {
-    title: "Front-End Ecosystem",
-    skills: [
-      { name: "Material UI (MUI)", icon: muiImage },
       {
-        name: "React Query",
-        icon: reactQueryImage,
+        icon: jsImage,
+        nameKey: 2,
       },
-      { name: "Zustand", icon: zustandImage, invertOnDark: true },
-      { name: "React Router", icon: reactRouterImage, invertOnDark: true },
-      { name: "Jest", icon: jestImage },
-      { name: "REST APIs", icon: restImage, invertOnDark: true },
+      {
+        icon: htmlImage,
+        nameKey: 3,
+      },
+      {
+        icon: cssImage,
+        nameKey: 4,
+      },
     ],
+    titleKey: 0,
   },
   {
-    title: "Additional Development Experience",
     skills: [
-      { name: "Vue.js", icon: vueImage },
-      { name: "Angular", icon: angularImage },
-      { name: "Java", icon: javaImage },
-      { name: "Grails / Groovy", icon: grailsImage },
-      { name: "SQL", icon: sqlImage },
-      { name: "Git", icon: gitImage },
+      {
+        icon: muiImage,
+        nameKey: 0,
+      },
+      {
+        icon: reactQueryImage,
+        nameKey: 1,
+      },
+      {
+        icon: zustandImage,
+        invertOnDark: true,
+        nameKey: 2,
+      },
+      {
+        icon: reactRouterImage,
+        invertOnDark: true,
+        nameKey: 3,
+      },
+      {
+        icon: jestImage,
+        nameKey: 4,
+      },
+      {
+        icon: restImage,
+        invertOnDark: true,
+        nameKey: 5,
+      },
     ],
+    titleKey: 1,
   },
   {
-    title: "Research & Tools",
     skills: [
-      { name: "Python", icon: pythonImage },
-      { name: "GitHub", icon: githubImage, invertOnDark: true },
-      { name: "Jira", icon: jiraImage },
-      { name: "Postman", icon: postmanImage },
+      {
+        icon: vueImage,
+        nameKey: 0,
+      },
+      {
+        icon: angularImage,
+        nameKey: 1,
+      },
+      {
+        icon: javaImage,
+        nameKey: 2,
+      },
+      {
+        icon: grailsImage,
+        nameKey: 3,
+      },
+      {
+        icon: sqlImage,
+        nameKey: 4,
+      },
+      {
+        icon: gitImage,
+        nameKey: 5,
+      },
     ],
+    titleKey: 2,
   },
-];
-
-const languages = [
-  { name: "Spanish", level: "Native" },
-  { name: "English", level: "Fluent / TOEIC 990" },
-  { name: "Japanese", level: "JLPT N2" },
+  {
+    skills: [
+      {
+        icon: pythonImage,
+        nameKey: 0,
+      },
+      {
+        icon: githubImage,
+        invertOnDark: true,
+        nameKey: 1,
+      },
+      {
+        icon: jiraImage,
+        nameKey: 2,
+      },
+      {
+        icon: postmanImage,
+        nameKey: 3,
+      },
+    ],
+    titleKey: 3,
+  },
 ];
 
 const Skill = ({ name, icon, featured = false, invertOnDark = false }) => (
@@ -112,56 +169,64 @@ const SkillGroup = ({ title, core = false, skills, id }) => (
   </section>
 );
 
-const Languages = () => (
-  <div className="skills-languages" id="languages">
-    <h3>
-      <span role="img" aria-label="Globe">
-        🌎
-      </span>{" "}
-      Languages
-    </h3>
+const Languages = () => {
+  const { t } = useTranslation();
+  const languages = t("skills.languages", { returnObjects: true });
+  return (
+    <div className="skills-languages" id="languages">
+      <h3>
+        <span role="img" aria-label={t("skills.globe")}>
+          🌎
+        </span>{" "}
+        {t("skills.languagesHeading")}
+      </h3>
 
-    <ul>
-      {languages.map(({ name, level }) => (
-        <li key={name}>
-          <strong>{name}</strong>
-          <span>{level}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
-
-const Skills = () => (
-  <section className="skills" id="skills" aria-labelledby="skills-heading">
-    <h2 id="skills-heading" className="skills-heading">
-      <span role="img" aria-label="Laptop">
-        💻
-      </span>{" "}
-      Skills
-    </h2>
-
-    <div className="skills-groups">
-      {skillGroups.map(({ title, core, skills }) => {
-        const id = `skills-group-${title
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, "-")
-          .replace(/(^-|-$)/g, "")}`;
-
-        return (
-          <SkillGroup
-            key={title}
-            id={id}
-            title={title}
-            core={core}
-            skills={skills}
-          />
-        );
-      })}
+      <ul>
+        {languages.map(({ name, level }) => (
+          <li key={name}>
+            <strong>{name}</strong>
+            <span>{level}</span>
+          </li>
+        ))}
+      </ul>
     </div>
+  );
+};
 
-    <Languages />
-  </section>
-);
+const Skills = () => {
+  const { t } = useTranslation();
+  return (
+    <section className="skills" id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" className="skills-heading">
+        <span role="img" aria-label={t("skills.laptop")}>
+          💻
+        </span>{" "}
+        {t("skills.heading")}
+      </h2>
+
+      <div className="skills-groups">
+        {skillGroups.map(({ titleKey, core, skills }) => {
+          const title = t(`skillGroups.${titleKey}.title`);
+          const id = `skills-group-${titleKey}`;
+
+          return (
+            <SkillGroup
+              key={title}
+              id={id}
+              title={title}
+              core={core}
+              skills={skills.map((skill) => ({
+                ...skill,
+                name: t(`skillGroups.${titleKey}.skills.${skill.nameKey}`),
+              }))}
+            />
+          );
+        })}
+      </div>
+
+      <Languages />
+    </section>
+  );
+};
 
 export default Skills;

@@ -1,0 +1,290 @@
+{
+  "projects": {
+    "items": {
+      "kansei-university-websites": {
+        "title": "感性工学を用いた大学WebサイトのUX研究",
+        "description": "筑波大学での修士研究として、留学生が日本の大学Webサイトをどのように感じ、どのように情報を探すのかを調査しています。感性工学による評価とマウストラッキングデータを組み合わせ、Webデザインとユーザーの印象・行動の関係を分析しています。",
+        "imageAlt": "日本の大学Webサイトを対象とした感性工学とユーザー行動の研究",
+        "technologies": [
+          "感性工学",
+          "UXリサーチ",
+          "マウストラッキング",
+          "データ分析"
+        ],
+        "status": "修士研究"
+      },
+      "mouse-tracking": {
+        "title": "Web行動分析用マウストラッキングツール",
+        "description": "Web閲覧実験でユーザーの操作データを収集・分析するPython製の研究ツールを開発しました。マウス移動、クリック、スクロール、セッション指標を記録し、PySide6による実験設定画面と、行動分析用のヒートマップ自動生成機能を備えています。",
+        "technologies": [
+          "Python",
+          "PySide6",
+          "データ可視化",
+          "UXリサーチ",
+          "行動データ"
+        ],
+        "status": "研究ツール"
+      },
+      "take-command-hra": {
+        "title": "Take Command HRA Hub",
+        "description": "企業のHRA給付管理と、従業員の医療保険の選択・加入を支援するTake CommandのHRA Hubの開発に携わりました。主に従業員向けの加入フローを担当し、ReactとTypeScriptを用いて保険プランの検索・比較から加入までの機能を開発・改善しました。",
+        "imageAlt": "Take Command HRA Hubの従業員向け医療保険加入プラットフォーム",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "MUI",
+          "React Query",
+          "Zustand",
+          "REST APIs"
+        ],
+        "status": "業務実績",
+        "note": "Take Commandの製品画面です。従業員向け加入フローの開発に携わりました。"
+      },
+      "efax-corporate": {
+        "title": "eFax Corporate",
+        "description": "Consensus Cloud Solutionsの企業向けクラウドFAXプラットフォーム「eFax Corporate」の開発に携わりました。業務文書を安全に送受信・管理するWebアプリケーションで、フロントエンドからバックエンドまで、機能開発・保守・ユーザーフローの改善を担当しました。",
+        "imageAlt": "eFax CorporateのクラウドFAXプラットフォーム",
+        "technologies": [
+          "React",
+          "Angular",
+          "JavaScript",
+          "Java",
+          "Grails",
+          "Groovy",
+          "REST APIs"
+        ],
+        "status": "業務実績",
+        "note": "製品画像 © Consensus Cloud Solutions。eFax Corporateの開発に携わりました。"
+      },
+      "tic-tac-toe": {
+        "title": "Tic Tac Toe",
+        "description": "ReactとTypeScriptで開発した2人用の三目並べゲームです。ゲーム状態の管理、勝敗判定、手番の切り替え、リセット機能を実装しています。",
+        "imageAlt": "三目並べの盤面とプレイヤー情報を表示する画面",
+        "technologies": ["React", "TypeScript"],
+        "status": "個人開発"
+      },
+      "disney-characters": {
+        "title": "Disney Character Search",
+        "description": "Disney APIを利用して、Disneyキャラクターを検索・閲覧できるReactアプリケーションを開発しました。デバウンス検索、お気に入り機能、ページネーション、React Queryを使ったデータ取得を実装しています。",
+        "imageAlt": "Disneyキャラクター検索アプリケーションの画面",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "MUI",
+          "React Query",
+          "Disney API"
+        ],
+        "status": "個人開発"
+      }
+    },
+    "heading": "プロジェクト・研究",
+    "emoji": "プロジェクト",
+    "intro": "これまでに携わったプロダクト開発、個人開発、UX研究の一部をご紹介します。",
+    "repo": "GitHubリポジトリ",
+    "repoLabel": "{{title}}のGitHubリポジトリ（新しいタブで開きます）",
+    "demo": "デモを見る",
+    "demoLabel": "{{title}}のデモ（新しいタブで開きます）",
+    "product": "製品ページ",
+    "productLabel": "{{title}}の製品ページ（新しいタブで開きます）",
+    "screenshot": "{{title}}のスクリーンショット",
+    "viewScreenshot": "{{title}}のスクリーンショットを見る（新しいタブで開きます）",
+    "comingSoon": "画像準備中"
+  },
+  "skillGroups": [
+    {
+      "title": "フロントエンド",
+      "skills": ["React", "TypeScript", "JavaScript", "HTML", "CSS"]
+    },
+    {
+      "title": "フロントエンド関連技術",
+      "skills": [
+        "Material UI (MUI)",
+        "React Query",
+        "Zustand",
+        "React Router",
+        "Jest",
+        "REST APIs"
+      ]
+    },
+    {
+      "title": "その他の開発経験",
+      "skills": ["Vue.js", "Angular", "Java", "Grails / Groovy", "SQL", "Git"]
+    },
+    {
+      "title": "研究・開発ツール",
+      "skills": ["Python", "GitHub", "Jira", "Postman"]
+    }
+  ],
+  "education": [
+    {
+      "id": "tsukuba",
+      "period": "2025年 - 現在",
+      "institution": "筑波大学 - 日本",
+      "degree": "情報学学位プログラム 修士課程",
+      "highlight": "文部科学省国費外国人留学生",
+      "description": "感性工学とUXを中心に、大学Webサイトにおけるユーザーの印象や行動について研究しています。"
+    },
+    {
+      "id": "uniandes",
+      "period": "2015年 - 2020年",
+      "institution": "Universidad de los Andes - コロンビア",
+      "degree": "2つの学士号を取得",
+      "degrees": ["システム・コンピューティング工学", "電子工学"],
+      "minor": "副専攻：日本文化・日本語"
+    }
+  ],
+  "experience": [
+    {
+      "id": "take-command-health",
+      "period": "2023年8月 - 2026年3月",
+      "company": "Take Command Health",
+      "role": "ソフトウェアエンジニア",
+      "description": "米国市場向けの医療保険プラットフォームで、フロントエンドエンジニアとして開発に携わりました。ReactとTypeScriptを用いた既存アプリケーションの再構築にも参加しました。",
+      "achievements": [
+        "医療保険の加入フロー全体にわたり、本番環境向けの機能開発・保守を担当し、複雑な要件を使いやすいUIとして実装しました。",
+        "FigmaのデザインをもとにレスポンシブUIを実装し、使いやすさとデザインの一貫性を高めました。",
+        "プロダクトマネージャー、デザイナー、QAエンジニア、バックエンドエンジニアと連携し、コンポーネントの保守性と再利用性を改善しました。"
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "React Query",
+        "Zustand",
+        "Material UI",
+        "Jest",
+        "React Testing Library",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "anthology",
+      "period": "2023年1月 - 2023年6月",
+      "company": "Anthology - Blackboard",
+      "role": "ソフトウェアエンジニア",
+      "description": "アジャイル開発チームの一員として、学習管理プラットフォームBlackboardの新機能開発に携わりました。",
+      "achievements": [
+        "2つの主要プロジェクトで本番環境向けの機能を実装し、テストとコードレビューを通じて品質を維持しました。",
+        "フロントエンドのパフォーマンス上のボトルネックを特定し、最適化を行いました。",
+        "主要機能の実装内容とパフォーマンス改善の成果を、データ可視化や指標を用いて関係者に共有しました。"
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Git",
+        "Jenkins",
+        "Docker",
+        "Java"
+      ]
+    },
+    {
+      "id": "consensus",
+      "period": "2020年7月 - 2023年1月",
+      "company": "Consensus Cloud Solutions",
+      "role": "ソフトウェアエンジニア",
+      "description": "米国市場向けの企業用クラウドFAXプラットフォーム「eFax Corporate」の保守・機能開発に携わりました。",
+      "achievements": [
+        "業務要件や顧客ニーズに基づき、10件以上の機能追加・改善を行いました。",
+        "30件以上の本番環境で発生した不具合について原因を調査し、修正をリリースすることで、システムの安定性と使いやすさを改善しました。",
+        "国際的なチームの一員として、フロントエンドとバックエンドの両方の開発に携わりました。"
+      ],
+      "technologies": [
+        "JavaScript",
+        "React",
+        "Angular",
+        "Grails",
+        "Groovy",
+        "Java",
+        "Spring",
+        "Git"
+      ]
+    },
+    {
+      "id": "iconoi",
+      "period": "2019年4月 - 2019年10月",
+      "company": "ICONOI S.A.",
+      "role": "ソフトウェアアナリスト",
+      "description": "データベースの改善、ソフトウェアアーキテクチャの文書化、ビジネスインテリジェンスWebアプリケーションの開発に携わりました。",
+      "technologies": [
+        "SQL",
+        "Java",
+        "HTML",
+        "CSS",
+        "Microsoft Analysis Services"
+      ]
+    },
+    {
+      "id": "uniandes-ta",
+      "period": "2016年 - 2020年",
+      "company": "Universidad de los Andes",
+      "role": "ティーチングアシスタント",
+      "description": "コンピュータサイエンス分野の4科目で、延べ200名以上の学部生を対象に、プログラミング、デバッグ、計算論的思考の学習をサポートしました。",
+      "technologies": ["Java", "Python", "C"]
+    }
+  ],
+  "common": {
+    "technologies": "{{title}}の使用技術"
+  },
+  "document": {
+    "title": "María Franco - ポートフォリオ",
+    "description": "María Francoのソフトウェアエンジニアとしての経験、スキル、プロジェクト、研究を紹介するポートフォリオ"
+  },
+  "nav": {
+    "navigation": "ポートフォリオのナビゲーション",
+    "introduction": "MF — 自己紹介",
+    "logo": "MF",
+    "skills": "スキル",
+    "experience": "職務経歴",
+    "education": "学歴",
+    "projects": "プロジェクト",
+    "light": "ライトモード",
+    "dark": "ダークモード",
+    "switchLight": "ライトモードに切り替える",
+    "switchDark": "ダークモードに切り替える",
+    "language": "表示言語を選択",
+    "en": "EN",
+    "ja": "日本語",
+    "selectEn": "英語に切り替える",
+    "selectJa": "日本語に切り替える"
+  },
+  "presentation": {
+    "name": "María Franco",
+    "hello": "こんにちは",
+    "greeting": "こんにちは、",
+    "sunflower": "ひまわり",
+    "role": "ソフトウェアエンジニア · フロントエンド",
+    "bio": "React、TypeScript、JavaScriptを中心に、使いやすく直感的なWebアプリケーションを開発しています。現在は文部科学省国費外国人留学生として筑波大学の情報学修士課程に在籍し、UXと感性工学を研究しています。",
+    "growing": "成長",
+    "opportunities": "日本でソフトウェアエンジニアとして働く機会を探しています",
+    "location": "日本在住",
+    "email": "mpfrancog@outlook.com",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "skills": {
+    "heading": "スキル",
+    "laptop": "ノートパソコン",
+    "globe": "地球",
+    "languagesHeading": "語学",
+    "languages": [
+      {
+        "name": "スペイン語",
+        "level": "母語"
+      },
+      {
+        "name": "英語",
+        "level": "ビジネスレベル / TOEIC 990点"
+      },
+      {
+        "name": "日本語",
+        "level": "JLPT N2"
+      }
+    ]
+  },
+  "headings": {
+    "education": "学歴",
+    "graduation": "角帽",
+    "experience": "職務経歴",
+    "briefcase": "ブリーフケース"
+  }
+}

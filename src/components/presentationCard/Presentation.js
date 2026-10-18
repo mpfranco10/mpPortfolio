@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import React from "react";
 import "./presentation.css";
 import profileImage from "../../assets/me.jpg";
@@ -6,6 +7,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLocationDot, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Presentation = () => {
+  const { t } = useTranslation();
   return (
     <section
       className="presentation"
@@ -15,49 +17,43 @@ const Presentation = () => {
       <img
         className="profile-pic"
         src={profileImage}
-        alt="María Franco"
+        alt={t("presentation.name")}
         width="200"
         height="200"
       />
       <div className="my-description">
         <p className="presentation-greeting">
-          <span role="img" aria-label="Hello">
+          <span role="img" aria-label={t("presentation.hello")}>
             👋
           </span>{" "}
-          Hi, I'm
+          {t("presentation.greeting")}
         </p>
         <h1 id="presentation-name">
-          María Franco
+          {t("presentation.name")}
           <span
             className="presentation-flower"
             role="img"
-            aria-label="Sunflower"
+            aria-label={t("presentation.sunflower")}
           >
             🌻
           </span>
         </h1>
-        <p className="presentation-role">
-          Software Engineer · Front-End Development
-        </p>
-        <p className="presentation-bio">
-          I create intuitive web experiences with React, TypeScript, and
-          JavaScript. Currently a MEXT Scholar at the University of Tsukuba,
-          exploring UX and Kansei Engineering through my Master's in Informatics
-        </p>
+        <p className="presentation-role">{t("presentation.role")}</p>
+        <p className="presentation-bio">{t("presentation.bio")}</p>
         <p className="presentation-opportunities">
-          <span role="img" aria-label="Growing">
+          <span role="img" aria-label={t("presentation.growing")}>
             🌱
           </span>{" "}
-          Open to engineering opportunities in Japan
+          {t("presentation.opportunities")}
         </p>
         <div className="presentation-contact">
           <span className="presentation-location">
             <FontAwesomeIcon icon={faLocationDot} aria-hidden="true" />
-            Based in Japan
+            {t("presentation.location")}
           </span>
           <a href="mailto:mpfrancog@outlook.com">
             <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
-            mpfrancog@outlook.com
+            {t("presentation.email")}
           </a>
         </div>
         <div className="presentation-socials">
@@ -67,7 +63,8 @@ const Presentation = () => {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
-            LinkedIn<span aria-hidden="true">↗</span>
+            {t("presentation.linkedin")}
+            <span aria-hidden="true">↗</span>
           </a>
           <a
             href="https://github.com/mpfranco10"
@@ -75,7 +72,8 @@ const Presentation = () => {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
-            GitHub<span aria-hidden="true">↗</span>
+            {t("presentation.github")}
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>

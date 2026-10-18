@@ -1,0 +1,293 @@
+{
+  "projects": {
+    "items": {
+      "kansei-university-websites": {
+        "title": "Kansei Engineering for University Websites",
+        "description": "Master's research at the University of Tsukuba exploring how international students perceive and interact with Japanese university websites. The study combines Kansei Engineering with user evaluations and mouse-tracking data to examine how website design influences perception, usability, and the overall browsing experience.",
+        "imageAlt": "Research on Kansei Engineering and user interaction with Japanese university websites",
+        "technologies": [
+          "Kansei Engineering",
+          "UX Research",
+          "Mouse Tracking",
+          "Data Analysis"
+        ],
+        "status": "Master's Research"
+      },
+      "mouse-tracking": {
+        "title": "Behavioral Mouse Tracking Tool",
+        "description": "Developed a Python-based research tool to collect and analyze user interaction data during web browsing studies. The tool records sampled mouse movement, clicks, scrolling, and session metrics, with a PySide6 interface for experiment setup and automatic heatmap generation for behavioral analysis.",
+        "technologies": [
+          "Python",
+          "PySide6",
+          "Data Visualization",
+          "UX Research",
+          "Behavioral Data"
+        ],
+        "status": "Research Tool"
+      },
+      "take-command-hra": {
+        "title": "Take Command HRA Hub",
+        "description": "Contributed to Take Command's HRA Hub, a platform that helps employers manage HRA benefits and employees find and enroll in health insurance plans. Worked primarily on the employee enrollment experience, building and improving React and TypeScript features across the plan shopping and enrollment flow.",
+        "imageAlt": "Take Command HRA Hub employee health insurance enrollment platform",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "MUI",
+          "React Query",
+          "Zustand",
+          "REST APIs"
+        ],
+        "status": "Professional Work",
+        "note": "Take Command product screenshot. I contributed to the development of the employee enrollment experience."
+      },
+      "efax-corporate": {
+        "title": "eFax Corporate",
+        "description": "Contributed to eFax Corporate, Consensus Cloud Solutions' enterprise cloud fax platform for securely sending, receiving, and managing business documents. Worked across front-end and full-stack features, maintaining and improving the web application and its user workflows.",
+        "imageAlt": "eFax Corporate cloud fax platform",
+        "technologies": [
+          "React",
+          "Angular",
+          "JavaScript",
+          "Java",
+          "Grails",
+          "Groovy",
+          "REST APIs"
+        ],
+        "status": "Professional Work",
+        "note": "eFax Corporate product image © Consensus Cloud Solutions. Displayed for portfolio purposes."
+      },
+      "tic-tac-toe": {
+        "title": "Tic Tac Toe",
+        "description": "Built an interactive Tic Tac Toe game using React and TypeScript, featuring game-state management, winner detection, turn tracking, and board reset functionality.",
+        "imageAlt": "Tic Tac Toe interface showing the game board and player information",
+        "technologies": ["React", "TypeScript"],
+        "status": "Personal Project"
+      },
+      "disney-characters": {
+        "title": "Disney Character Search",
+        "description": "Built a React application for browsing and searching Disney characters using the Disney API, with debounced search, favorites, pagination, and data fetching with React Query.",
+        "imageAlt": "Disney characters featured in the character search project",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "MUI",
+          "React Query",
+          "Disney API"
+        ],
+        "status": "Personal Project"
+      }
+    },
+    "heading": "Projects & Research",
+    "emoji": "Projects",
+    "intro": "A selection of development and research projects combining software engineering, user experience, and human-centered technology.",
+    "repo": "GitHub repo",
+    "repoLabel": "{{title}} GitHub repository (opens in a new tab)",
+    "demo": "Live demo",
+    "demoLabel": "{{title}} live demo (opens in a new tab)",
+    "product": "Product page",
+    "productLabel": "{{title}} product page (opens in a new tab)",
+    "screenshot": "{{title}} screenshot",
+    "viewScreenshot": "View {{title}} screenshot (opens in a new tab)",
+    "comingSoon": "Image coming soon"
+  },
+  "skillGroups": [
+    {
+      "title": "Core Front-End",
+      "skills": ["React", "TypeScript", "JavaScript", "HTML", "CSS"]
+    },
+    {
+      "title": "Front-End Ecosystem",
+      "skills": [
+        "Material UI (MUI)",
+        "React Query",
+        "Zustand",
+        "React Router",
+        "Jest",
+        "REST APIs"
+      ]
+    },
+    {
+      "title": "Additional Development Experience",
+      "skills": ["Vue.js", "Angular", "Java", "Grails / Groovy", "SQL", "Git"]
+    },
+    {
+      "title": "Research & Tools",
+      "skills": ["Python", "GitHub", "Jira", "Postman"]
+    }
+  ],
+  "education": [
+    {
+      "id": "tsukuba",
+      "period": "2025 - Present",
+      "institution": "University of Tsukuba - Japan",
+      "degree": "M.S. in Informatics",
+      "highlight": "MEXT Scholar",
+      "description": "Research focused on Kansei Engineering, User Experience (UX), and User-Centered Web Design, exploring how digital experiences can better respond to users' perceptions and needs."
+    },
+    {
+      "id": "uniandes",
+      "period": "2015 - 2020",
+      "institution": "Universidad de los Andes - Colombia",
+      "degree": "Dual B.S. Degrees",
+      "degrees": [
+        "Systems and Computing Engineering",
+        "Electronics Engineering"
+      ],
+      "minor": "Minor in Machine Learning"
+    }
+  ],
+  "experience": [
+    {
+      "id": "take-command-health",
+      "period": "August 2023 - March 2026",
+      "company": "Take Command Health",
+      "role": "Software Engineer",
+      "description": "Worked as a Front-End Software Engineer on a modern health insurance platform for the U.S. market, contributing to the redevelopment of a legacy application using React and TypeScript.",
+      "achievements": [
+        "Built and maintained production features across multiple stages of the health insurance enrollment experience, translating complex requirements into intuitive user interfaces.",
+        "Developed pixel-accurate, responsive interfaces from Figma designs and contributed UI improvements focused on usability and visual consistency.",
+        "Collaborated with product managers, designers, QA engineers, and backend developers while improving component maintainability and reusable front-end architecture."
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "React Query",
+        "Zustand",
+        "Material UI",
+        "Jest",
+        "React Testing Library",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "anthology",
+      "period": "January 2023 - June 2023",
+      "company": "Anthology - Blackboard",
+      "role": "Software Engineer",
+      "description": "Contributed to new features for the Blackboard learning management platform as part of an Agile development team.",
+      "achievements": [
+        "Delivered production-ready features for two major platform initiatives while maintaining code quality through testing and code reviews.",
+        "Identified frontend performance bottlenecks and implemented optimizations to improve application performance.",
+        "Presented the implementation and performance results of a key feature to stakeholders using data visualizations and performance metrics."
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Git",
+        "Jenkins",
+        "Docker",
+        "Java"
+      ]
+    },
+    {
+      "id": "consensus",
+      "period": "July 2020 - January 2023",
+      "company": "Consensus Cloud Solutions",
+      "role": "Software Engineer",
+      "description": "Contributed to the maintenance and continuous improvement of eFax Corporate, a large-scale cloud-based fax management platform for the U.S. market.",
+      "achievements": [
+        "Delivered 10+ feature enhancements based on business requirements and customer needs.",
+        "Resolved 30+ production issues by investigating root causes and deploying fixes that improved application stability, usability, and reliability.",
+        "Worked across frontend and backend technologies within an international, cross-functional development team."
+      ],
+      "technologies": [
+        "JavaScript",
+        "React",
+        "Angular",
+        "Grails",
+        "Groovy",
+        "Java",
+        "Spring",
+        "Git"
+      ]
+    },
+    {
+      "id": "iconoi",
+      "period": "April 2019 - October 2019",
+      "company": "ICONOI S.A.",
+      "role": "Software Analyst",
+      "description": "Supported database improvements, software architecture documentation, and the development of a business intelligence web application.",
+      "technologies": [
+        "SQL",
+        "Java",
+        "HTML",
+        "CSS",
+        "Microsoft Analysis Services"
+      ]
+    },
+    {
+      "id": "uniandes-ta",
+      "period": "2016 - 2020",
+      "company": "Universidad de los Andes",
+      "role": "Undergraduate Teaching Assistant",
+      "description": "Mentored 200+ undergraduate students across four computer science courses, supporting them with programming, debugging, and computational thinking.",
+      "technologies": ["Java", "Python", "C"]
+    }
+  ],
+  "common": {
+    "technologies": "{{title}} technologies"
+  },
+  "document": {
+    "title": "Maria Franco - Portfolio",
+    "description": "Maria Franco - Portfolio"
+  },
+  "nav": {
+    "navigation": "Portfolio navigation",
+    "introduction": "MF — Introduction",
+    "logo": "MF",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+    "switchLight": "Switch to light mode",
+    "switchDark": "Switch to dark mode",
+    "language": "Select language",
+    "en": "EN",
+    "ja": "日本語",
+    "selectEn": "Switch to English",
+    "selectJa": "Switch to Japanese"
+  },
+  "presentation": {
+    "name": "María Franco",
+    "hello": "Hello",
+    "greeting": "Hi, I'm",
+    "sunflower": "Sunflower",
+    "role": "Software Engineer · Front-End Development",
+    "bio": "I create intuitive web experiences with React, TypeScript, and JavaScript. Currently a MEXT Scholar at the University of Tsukuba, exploring UX and Kansei Engineering through my Master's in Informatics",
+    "growing": "Growing",
+    "opportunities": "Open to engineering opportunities in Japan",
+    "location": "Based in Japan",
+    "email": "mpfrancog@outlook.com",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "skills": {
+    "heading": "Skills",
+    "laptop": "Laptop",
+    "globe": "Globe",
+    "languagesHeading": "Languages",
+    "languages": [
+      {
+        "name": "Spanish",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent / TOEIC 990"
+      },
+      {
+        "name": "Japanese",
+        "level": "JLPT N2"
+      }
+    ]
+  },
+  "headings": {
+    "education": "Education",
+    "graduation": "graduation cap",
+    "experience": "Work experience",
+    "briefcase": "briefcase"
+  }
+}

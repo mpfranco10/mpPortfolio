@@ -1,83 +1,52 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import "./projects.css";
 
-import marvelScreenshot from "../../assets/reactMarvel.jpg";
-import hero from "../../assets/hero.jpg";
-import tictactoe from "../../assets/tictactoe.jpg";
+import disney from "../../assets/disney.png";
+import efaxCorporate from "../../assets/efax.png";
+import kansei from "../../assets/kansei.png";
+import mouset from "../../assets/mouset.png";
+import tch from "../../assets/tch.webp";
+import tictactoe from "../../assets/ticTacToe.png";
 
 // Add or update projects here.
 // Images, links, technologies, and status are optional.
 const projects = [
   {
     id: "kansei-university-websites",
-    title: "Kansei Engineering for University Websites",
-    description:
-      "Master's research exploring how Kansei Engineering and user-centered methods can be applied to university websites to better understand users' perceptions, behaviors, and overall experience.",
-    image: null, // TODO: Add research visualization or university website study image
-    imageAlt: "Kansei Engineering university website research",
-    technologies: [
-      "Kansei Engineering",
-      "UX Research",
-      "User-Centered Design",
-      "Data Analysis",
-    ],
-    status: "Master's Research",
+    image: kansei,
   },
   {
     id: "mouse-tracking",
-    title: "Behavioral Mouse Tracking Tool",
-    description:
-      "Developed a Python-based research tool to capture user interaction data during web browsing sessions, including mouse movement, clicks, scrolling, time, and screen boundaries. The collected data supports behavioral analysis as part of my UX research.",
-    image: null, // TODO: Add screenshot or visualization from the tracking tool
-    imageAlt: "Behavioral mouse tracking research tool",
-    technologies: [
-      "Python",
-      "UX Research",
-      "Behavioral Data",
-      "Data Collection",
-    ],
-    status: "Research Tool",
+    image: mouset,
+    github: "https://github.com/mpfranco10/mouse-interaction-tracker",
   },
   {
-    id: "ux-research-platform",
-    title: "UX Research Experiment Platform",
-    description:
-      "Developed a web-based research environment to collect user evaluations of university websites and support the analysis of subjective impressions and interaction behavior.",
-    image: null, // TODO: Add screenshot of the research platform
-    imageAlt: "Web-based UX research experiment platform",
-    technologies: ["React", "UX Research", "Data Collection"],
-    status: "Research Tool",
-    // TODO: Add GitHub or demo link if this project can be shared publicly
+    id: "take-command-hra",
+    image: tch,
+    productUrl: "https://www.takecommandhealth.com/hra-administration-software",
+  },
+  {
+    id: "efax-corporate",
+    image: efaxCorporate,
+    productUrl: "https://enterprise.efax.com/",
   },
   {
     id: "tic-tac-toe",
-    title: "Tic Tac Toe",
-    description:
-      "Built an interactive Tic Tac Toe game using React and TypeScript, featuring game-state management, winner detection, turn tracking, and board reset functionality.",
     image: tictactoe,
-    imageAlt:
-      "Tic Tac Toe interface showing the game board and player information",
-    technologies: ["React", "TypeScript"],
     github: "https://github.com/mpfranco10/ticTacToe",
     demo: "https://mpfranco10.github.io/ticTacToe/",
-    status: "Personal Project",
   },
   {
-    id: "marvel-hooks",
-    title: "Marvel Character Search",
-    description:
-      "Built a React application for searching Marvel characters through the Marvel API, including debounced search input to reduce unnecessary API requests and improve the user experience.",
-    image: hero,
-    imageAlt: "Iron Man artwork used in the Marvel character search project",
-    imageHref: marvelScreenshot,
-    technologies: ["React", "Marvel API", "REST API"],
+    id: "disney-characters",
+    image: disney,
+    imageHref: disney,
     github: "https://github.com/mpfranco10/marvel-hooks",
     demo: "https://mpfranco10.github.io/marvel-hooks/",
-    status: "Personal Project",
   },
 ];
 
 const ProjectCard = ({ project }) => {
+  const { t } = useTranslation();
   const {
     id,
     title,
@@ -90,16 +59,64 @@ const ProjectCard = ({ project }) => {
     demo,
     status,
     placeholder,
-  } = project;
+    note,
+    productUrl,
+  } = {
+    ...project,
+    ...t(`projects.items.${project.id}`, { returnObjects: true }),
+  };
+
+  const actions = [
+    github && {
+      href: github,
+      label: t("projects.repo"),
+      ariaLabel: t("projects.repoLabel", { title }),
+    },
+    demo && {
+      href: demo,
+      label: t("projects.demo"),
+      ariaLabel: t("projects.demoLabel", { title }),
+    },
+    productUrl && {
+      href: productUrl,
+      label: t("projects.product"),
+      ariaLabel: t("projects.productLabel", { title }),
+    },
+  ].filter(Boolean);
 
   const screenshot = image ? (
     <img
       className="project-image"
       src={image}
-      alt={imageAlt || `${title} screenshot`}
+      alt={imageAlt || t("projects.screenshot", { title })}
       loading="lazy"
     />
   ) : null;
+
+  let mediaContent;
+
+  if (!screenshot) {
+    mediaContent = (
+      <div className="project-placeholder" aria-hidden="true">
+        <span className="project-placeholder-symbol">＋</span>
+        <span>{t("projects.comingSoon")}</span>
+      </div>
+    );
+  } else if (imageHref) {
+    mediaContent = (
+      <a
+        className="project-preview"
+        href={imageHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={t("projects.viewScreenshot", { title })}
+      >
+        {screenshot}
+      </a>
+    );
+  } else {
+    mediaContent = screenshot;
+  }
 
   return (
     <article
@@ -108,28 +125,7 @@ const ProjectCard = ({ project }) => {
       }`}
       aria-labelledby={`project-${id}`}
     >
-      <div className="project-media">
-        {screenshot ? (
-          imageHref ? (
-            <a
-              className="project-preview"
-              href={imageHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View ${title} screenshot (opens in a new tab)`}
-            >
-              {screenshot}
-            </a>
-          ) : (
-            screenshot
-          )
-        ) : (
-          <div className="project-placeholder" aria-hidden="true">
-            <span className="project-placeholder-symbol">＋</span>
-            <span>Image coming soon</span>
-          </div>
-        )}
-      </div>
+      <div className="project-media">{mediaContent}</div>
 
       <div className="project-content">
         <header className="project-header">
@@ -140,10 +136,12 @@ const ProjectCard = ({ project }) => {
 
         {description && <p className="project-description">{description}</p>}
 
+        {note && <p className="project-note">{note}</p>}
+
         {technologies.length > 0 && (
           <ul
             className="project-technologies"
-            aria-label={`${title} technologies`}
+            aria-label={t("common.technologies", { title })}
           >
             {technologies.map((technology) => (
               <li key={technology}>{technology}</li>
@@ -151,29 +149,19 @@ const ProjectCard = ({ project }) => {
           </ul>
         )}
 
-        {(github || demo) && (
+        {actions.length > 0 && (
           <div className="project-actions">
-            {github && (
+            {actions.map(({ href, label, ariaLabel }) => (
               <a
-                href={github}
+                key={label}
+                href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${title} GitHub repository (opens in a new tab)`}
+                aria-label={ariaLabel}
               >
-                GitHub repo <span aria-hidden="true">↗</span>
+                {label} <span aria-hidden="true">↗</span>
               </a>
-            )}
-
-            {demo && (
-              <a
-                href={demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${title} live demo (opens in a new tab)`}
-              >
-                Live demo <span aria-hidden="true">↗</span>
-              </a>
-            )}
+            ))}
           </div>
         )}
       </div>
@@ -182,6 +170,7 @@ const ProjectCard = ({ project }) => {
 };
 
 const Projects = () => {
+  const { t } = useTranslation();
   return (
     <section
       className="projects"
@@ -189,16 +178,13 @@ const Projects = () => {
       aria-labelledby="projects-heading"
     >
       <h2 className="projects-heading" id="projects-heading">
-        <span role="img" aria-label="Projects">
+        <span role="img" aria-label={t("projects.emoji")}>
           📲
         </span>{" "}
-        Projects & Research
+        {t("projects.heading")}
       </h2>
 
-      <p className="projects-intro">
-        A selection of development and research projects combining software
-        engineering, user experience, and human-centered technology.
-      </p>
+      <p className="projects-intro">{t("projects.intro")}</p>
 
       <div className="projects-grid">
         {projects.map((project) => (

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./navBar.css";
 
@@ -8,6 +9,7 @@ import {
   faGears,
   faGraduationCap,
   faLaptopCode,
+  faLanguage,
   faMoon,
   faSun,
 } from "@fortawesome/free-solid-svg-icons";
@@ -16,34 +18,34 @@ const themes = {
   dark: {
     name: "dark",
     icon: faSun,
-    text: "Light Mode",
+    text: "light",
   },
   light: {
     name: "light",
     icon: faMoon,
-    text: "Dark Mode",
+    text: "dark",
   },
 };
 
 const navItems = [
   {
     section: "skills",
-    label: "Skills",
+    label: "skills",
     icon: faGears,
   },
   {
     section: "experience",
-    label: "Experience",
+    label: "experience",
     icon: faBriefcase,
   },
   {
     section: "education",
-    label: "Education",
+    label: "education",
     icon: faGraduationCap,
   },
   {
     section: "projects",
-    label: "Projects",
+    label: "projects",
     icon: faLaptopCode,
   },
 ];
@@ -75,6 +77,8 @@ const NavLink = ({ section, label, icon, activeSection }) => {
 };
 
 const NavBar = () => {
+  const { t, i18n } = useTranslation();
+  const language = i18n.resolvedLanguage;
   const [theme, setTheme] = useState(themes.dark);
   const [activeSection, setActiveSection] = useState("presentation");
   const scrollFrame = useRef(null);
@@ -155,33 +159,70 @@ const NavBar = () => {
   const isPresentationActive = activeSection === "presentation";
 
   return (
-    <nav className="navbar" aria-label="Portfolio navigation">
+    <nav className="navbar" aria-label={t("nav.navigation")}>
       <ul className="navbar-nav">
         <li className="logo">
           <a
             href="#presentation"
             className={`nav-link${isPresentationActive ? " is-active" : ""}`}
-            aria-label="MF — Introduction"
+            aria-label={t("nav.introduction")}
             aria-current={isPresentationActive ? "location" : undefined}
           >
             <FontAwesomeIcon icon={faCode} className="fa-primary" />
-            <span className="logo-text">MF</span>
+            <span className="logo-text">{t("nav.logo")}</span>
           </a>
         </li>
 
         {navItems.map((item) => (
-          <NavLink key={item.section} {...item} activeSection={activeSection} />
+          <NavLink
+            key={item.section}
+            {...item}
+            label={t(`nav.${item.label}`)}
+            activeSection={activeSection}
+          />
         ))}
 
+        <li className="nav-item language-item">
+          <button
+            type="button"
+            className="nav-link language-switcher"
+            aria-label={t(language === "en" ? "nav.selectJa" : "nav.selectEn")}
+            title={t(language === "en" ? "nav.selectJa" : "nav.selectEn")}
+            onClick={() => i18n.changeLanguage(language === "en" ? "ja" : "en")}
+          >
+            <FontAwesomeIcon
+              icon={faLanguage}
+              className="fa-primary"
+              aria-hidden="true"
+            />
+            <span className="link-text language-options" aria-hidden="true">
+              <span
+                lang="en"
+                className={language === "en" ? "is-selected" : undefined}
+              >
+                {t("nav.en")}
+              </span>
+              <span className="language-divider">|</span>
+              <span
+                lang="ja"
+                className={language === "ja" ? "is-selected" : undefined}
+              >
+                {t("nav.ja")}
+              </span>
+            </span>
+          </button>
+        </li>
         <li className="nav-item" id="changeTheme">
           <button
             type="button"
             className="nav-link"
             onClick={changeTheme}
-            aria-label={`Switch to ${theme.text.toLowerCase()}`}
+            aria-label={t(
+              theme.name === "dark" ? "nav.switchLight" : "nav.switchDark"
+            )}
           >
             <FontAwesomeIcon icon={theme.icon} className="fa-primary" />
-            <span className="link-text">{theme.text}</span>
+            <span className="link-text">{t(`nav.${theme.text}`)}</span>
           </button>
         </li>
       </ul>
